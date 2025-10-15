@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SportPulse</title>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+  <div class="logo">SP</div>
+  <div>
+    <div class="brand">SportPulse</div>
+    <div class="small">Notícias e placares</div>
+  </div>
+  <div style="margin-left:auto" class="small"></div>
+</header>
+
+<main class="container" id="app">
+  <div class="controls card">
+    <div>
+      <label class="small">Esporte:</label>
+      <select id="sportSelect" class="select"></select>
+    </div>
+    <div>
+      <label class="small">Liga:</label>
+      <select id="leagueSelect" class="select"></select>
+    </div>
+    <button class="btn" id="refreshBtn">Atualizar</button>
+    <div style="margin-left:auto" class="small"></div>
+  </div>
+
+  <div class="grid">
+    <section class="main">
+      <div class="card" id="newsCard">
+        <h2 class="headline">Notícias</h2>
+        <div id="newsList" class="loading">Carregando notícias...</div>
+      </div>
+      <div class="card" id="scoresCard" style="margin-top:12px">
+        <h3 class="headline">Placar (ao vivo)</h3>
+        <div id="scoreboard" class="loading">Carregando placares...</div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3 class="headline">Escolha rápida</h3>
+        <div class="league-list" id="quickList"></div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <h3 class="headline">Dicas</h3>
+        <div class="small"></div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="footer">Dados obtidos via endpoints públicos do ESPN.</div>
+</main>
+
+<script src="/script.js"></script>
+</body>
+</html>
